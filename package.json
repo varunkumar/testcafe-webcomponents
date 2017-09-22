@@ -1,5 +1,5 @@
 {
-  "name": "testcafe-shadowdom",
+  "name": "testcafe-webcomponents",
   "version": "1.0.0",
   "description": "Test project for testing web components with TestCafe",
   "scripts": {
