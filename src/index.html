@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta name="description" content="Web Components" />
+  <meta charset="utf-8">
+  <title>Web Components</title>
+  <template id="template">
+    <div id="container">
+      <content select="h1"></content>
+      <input type="text" id="txtTest" />
+      <button id="btnTest" onclick="console.log('hello')">Test</button>
+    </div>
+  </template>
+</head>
+
+<body>
+  <div style="height: 150px" id="container">Large dummy container</div>
+  <div id="host">
+    <h1>This is Shadow DOM!!</h1>
+  </div>
+  <script>
+    const attachShadow = () => {
+      const host = document.querySelector('#host');
+      const root = host.createShadowRoot();
+
+      const template = document.querySelector('#template');
+      const clone = document.importNode(template.content, true);
+      root.appendChild(clone);
+    }
+
+    const increaseContainerHeight = () => {
+      document.querySelector('#container').style.height = '1500px';
+    }
+
+    attachShadow();
+    document.querySelector('#container').addEventListener('click', increaseContainerHeight);
+
+  </script>
+</body>
+
+</html>

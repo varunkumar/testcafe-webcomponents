@@ -1,0 +1,16 @@
+{
+  "name": "testcafe-shadowdom",
+  "version": "1.0.0",
+  "description": "Test project for testing web components with TestCafe",
+  "scripts": {
+    "test": "testcafe chrome tests/**/*.js"
+  },
+  "keywords": [
+    "TestCafe"
+  ],
+  "author": "Varunkumar Nagarajan",
+  "license": "MIT",
+  "devDependencies": {
+    "testcafe": "^0.17.2"
+  }
+}
